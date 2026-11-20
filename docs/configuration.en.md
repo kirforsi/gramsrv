@@ -119,9 +119,10 @@ Retained typed graphs remain charged to the RPC scheduler budget above.
 | `TELESRV_TELEGRAM_LOGIN_CODE_TTL` | duration / `2m` | One-time code lifetime; bounded to `30s..10m`. |
 | `TELESRV_TELEGRAM_LOGIN_ID_TOKEN_TTL` | duration / `1h` | Signed ID-token lifetime; bounded to `1m..24h`. Retiring signing keys must cover this window. |
 | `TELESRV_TELEGRAM_LOGIN_TRUSTED_PROXY_CIDRS` | comma-separated CIDRs / empty | Only requests whose direct peer is in this list may supply `Forwarded`/`X-Forwarded-*` client metadata. The documented nginx deployment uses `127.0.0.1/32,::1/128`. |
-| `TELESRV_TELEGRAM_LOGIN_RETENTION` | duration / `168h` | Retention after terminal request/code/revocation state; bounded to `1h..90d`. |
+| `TELESRV_TELEGRAM_LOGIN_RETENTION | duration / `168h` | Retention after terminal request/code/revocation state; bounded to `1h..90d`. |
 | `TELESRV_TELEGRAM_LOGIN_SWEEP_INTERVAL` | duration / `5m` | Retention worker interval; bounded to `10s..1h`. |
 | `TELESRV_TELEGRAM_LOGIN_SWEEP_BATCH` | int / `500` | Maximum rows per retention pass; bounded to `1..1000`. |
+| `TELESRV_AUTOSUBSCRIBE_CHANNELS` | comma-separated channel ID's / empty | Automatically subscribes newly registered accounts to the specified channels. |
 
 ### 3.1 Bot API webhook troubleshooting
 
