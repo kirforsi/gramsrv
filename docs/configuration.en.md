@@ -122,6 +122,7 @@ Retained typed graphs remain charged to the RPC scheduler budget above.
 | `TELESRV_TELEGRAM_LOGIN_RETENTION` | duration / `168h` | Retention after terminal request/code/revocation state; bounded to `1h..90d`. |
 | `TELESRV_TELEGRAM_LOGIN_SWEEP_INTERVAL` | duration / `5m` | Retention worker interval; bounded to `10s..1h`. |
 | `TELESRV_TELEGRAM_LOGIN_SWEEP_BATCH` | int / `500` | Maximum rows per retention pass; bounded to `1..1000`. |
+| `TELESRV_AUTOSUBSCRIBE_CHANNELS` | int / `1,2,3` | Automatically subscribes newly registered accounts to the specified channels; |
 
 ### 3.1 Bot API webhook troubleshooting
 
